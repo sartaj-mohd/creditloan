@@ -1,0 +1,110 @@
+.b-slider {
+	position: relative;
+	z-index: 999;
+} 
+
+.b-slider__slides {
+	margin: 0; padding: 0; list-style: none;
+}
+
+.b-slider__item {
+	display: block;
+	float: left;
+	position: relative;
+}
+
+.b-slider__item:not(:first-child) {
+	height: 0;
+}
+
+.b-slider__item--hidden-caption .b-slider__item__caption {
+	display: none;
+}
+
+.b-slider__item__caption {
+	background: rgba(0,0,0,0.6);
+	color: #fff;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 8px 12px;
+	font-size: 12px;
+}
+
+.b-slider__item__caption h4 {
+	color: #fff;
+	font-weight: bold;
+}
+
+.b-slider__item__caption__text {
+	color: #fff;
+	color: rgba(255,255,255,0.7);
+}
+
+.b-slider__pagination-nav {
+	text-align: center;
+	padding: 10px 0;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -30px;
+	z-index: 4010;
+}
+
+.b-slider__pagination-nav a {
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	line-height: 11px;
+	margin: 0 4px;
+	background: #666;
+	background: rgba(0,0,0,0.5);
+	cursor: pointer;
+	text-indent: -9999px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+	border-radius: 20px;
+	-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); 
+	-moz-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); 
+	-o-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); 
+	box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+}
+
+.b-slider__pagination-nav a:hover {
+	background: #333; 
+	background: rgba(0,0,0,0.7);
+}
+
+.b-slider__pagination-nav a.selected {
+	background: #000; 
+	background: rgba(0,0,0,0.9); 
+	cursor: default;
+}
+
+.b-slider__direction-nav a {
+	background-image: url('../img/slider__direction-nav__arrows.png');
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	width: 40px;
+	height: 100px;
+	display: block;
+	position: absolute;
+	top: 50%;
+	margin-top: -50px;
+	left: 0;
+	text-indent: -9999px;
+	overflow: hidden;
+	z-index: 4020;
+}
+
+.b-slider__direction-nav a.b-slider__direction-nav__next {
+	left: auto;
+	right: 0;
+	background-position: -40px 0;
+}
+
+.b-slider__item[data="url"] {
+	cursor: pointer;
+}
